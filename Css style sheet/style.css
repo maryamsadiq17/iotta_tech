@@ -801,7 +801,7 @@ li {
 }
 
 /* ── Left Side (Text) ── */
-.hero-left {
+.hero-left-1 {
   flex: 1;
   padding: 0 5% 0 10%; /* 10% left padding matches the Figma gutter */
   z-index: 10;
@@ -1050,4 +1050,100 @@ li {
   font-size: 14px;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.7);
+}
+
+/* .....About US Section..... */
+
+.about-us-section {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../Images/Rectangle\ 5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;        /* vertically centers content */
+  position: relative;
+}
+
+/* Dark overlay so white text stays readable */
+.about-us-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;                 /* sits above the overlay */
+  text-align: center;
+  max-width: 1080px;
+  padding: 0 24px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* The italic "for" and "your house" spans */
+.hero-title span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-subtext {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 1200px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.hero-cta:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
