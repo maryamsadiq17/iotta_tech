@@ -131,16 +131,13 @@ li {
   background: #000;
   color: #fff;
   border: none;
-  padding: 18px 40px;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 400;
   cursor: pointer;
-  display: flex;
-  align-self: flex-start;
-  align-items: center;
-  gap: 12px;
-  transition: transform 0.2s;
+  margin-top: auto;
+  align-self: center;   /* ← this line forces the button to center itself */
 }
 
 .buy-btn:hover {
@@ -1171,4 +1168,142 @@ li {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
+}
+/* Newsletter Section */
+.newsletter-section {
+  background-color: #f5efe6;   /* cream/warm off-white from the design */
+  width: 100%;
+  padding: 60px 5%;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.newsletter-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ── Left Side ── */
+.newsletter-left {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.newsletter-heading {
+  font-family: "Tenez", serif;   /* use your serif font here */
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.italic-text {
+  font-style: italic;
+  font-weight: 400;              /* lighter weight for the italic word */
+}
+
+.newsletter-subtext {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Form ── */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.email-input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px ;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  background: #ffffff;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.email-input::placeholder {
+  color: #aaa;
+}
+
+.email-input:focus {
+  border-color: #999;
+}
+
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 24px;
+  background-color: #1a1a1a;    /* black button */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.25%;        /* spaced out uppercase text */
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-sizing: border-box;
+}
+
+.subscribe-btn:hover {
+  background-color: #333;
+  transform: translateY(-1px);
+}
+
+.subscribe-btn img {
+  flex-shrink: 0;
+}
+
+/* ── Right Side ── */
+.newsletter-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;        /* image sits at the bottom like in the design */
+}
+
+.purifier-img {
+  width: 100%;
+  height: auto;
+  object-fit: fit;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .newsletter-left {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .newsletter-right {
+    width: 100%;
+    max-width: 260px;
+  }
 }
