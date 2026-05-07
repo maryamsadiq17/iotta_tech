@@ -217,7 +217,6 @@ li {
 }
 
 /* ...bundle-section... */
-
 .bundle-section {
   padding: 60px 5%;
   background-color: #fff;
@@ -225,16 +224,34 @@ li {
 }
 
 .bundle-header {
-  font-family: Tenez;
-  text-align: center;
+  display: flex;              /* puts h2 and span on the same line */
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
   margin-bottom: 40px;
+}
+
+.bundle-header h2 {
+  font-family: "Tenez", serif;
+  font-size: 24px;
+  font-weight:900;
+  font-style: italic;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.bundle-header span {
+    font-family: "Tenez", serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #1a1a1a;
 }
 
 .bundle-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1100px;
+  /* gap: 24px; */
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -242,7 +259,17 @@ li {
   background: #fff;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #ededed;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  border-right: 1px solid #ededed;  /* full 4-sided border, not just border-right */
+  
+}
+.bundle-card-3{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 20px;
   position: relative;
@@ -256,18 +283,24 @@ li {
 }
 
 .badge-info {
-  background: #f3f5f7;
-  padding: 8px 16px;
-  border-radius: 20px;
+  display: inline-flex;       /* needed so the icon and text align properly */
   align-items: center;
-  font-size: 16px;
+  gap: 6px;
+  background: #f3f5f7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
   font-weight: 400;
+}
+
+.badge-info img {
+  width: 16px;
+  height: 16px;
 }
 
 .badge-save {
   background: #d4ff5e;
-  /* The bright lime green from your image */
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
@@ -288,14 +321,12 @@ li {
 .card-details {
   text-align: center;
   width: 100%;
-  font-size: 16px;
-  font-weight: 400px;
 }
 
 .card-details h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
   color: #1a1a1a;
 }
 
@@ -303,45 +334,40 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .old-price {
-  font-size: 22px;
-  color: #d1d1d1;
-  /* Light grey */
+  font-size: 20px;
+  color: #c0c0c0;
   text-decoration: line-through;
+  font-weight: 400;
 }
 
 .current-price {
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 800;
   color: #000;
-}
-
-.card-buy {
-  justify-content: center;
-  align-items: center;
 }
 
 .buy-btn {
   background: #000;
   color: #fff;
-  justify-content: center;
   border: none;
   padding: 12px 24px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: auto;           /* pushes button to bottom even if card heights differ */
 }
 
 .buy-btn:hover {
-  transform: scale(1.02);
+  background: #222;
+  transform: translateY(-1px);
 }
-
 /* Logo Section Styles */
 .logo-section {
   background-color: #000;
