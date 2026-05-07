@@ -812,13 +812,12 @@ li {
 
 .brand-logo {
   color: #fff;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 24px;
   margin-bottom: 24px;
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
   font-size: 42px;
   line-height: 1.1;
   color: #fff;
@@ -831,7 +830,7 @@ li {
 }
 
 .hero-subtext {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   color: rgba(255, 255, 255, 0.7);
   max-width: 400px;
@@ -844,7 +843,7 @@ li {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background-color: #F9F5EC; /* Matches Figma Rectangle color */
+  background-color: #f9f5ec; /* Matches Figma Rectangle color */
   color: #000;
   padding: 18px 36px;
   border-radius: 8px;
@@ -918,26 +917,26 @@ li {
   /* Fix for your image issue */
   height: 100vh; /* Adjust height based on your Figma design */
   width: 100%;
-  background-image: url('../Images/image 22.png');
-  background-size: cover;    /* Ensures image fills the container */
+  background-image: url("../Images/image 22.png");
+  background-size: cover; /* Ensures image fills the container */
   background-position: center; /* Keeps the product/bed centered */
   background-repeat: no-repeat;
-  
+
   display: flex;
   justify-content: center; /* Centers the card horizontally */
-  padding-top: 40px;       /* Pushes the card down from the top slightly */
+  padding-top: 40px; /* Pushes the card down from the top slightly */
   position: relative;
 }
 
 /* The Floating Cream Card */
 .info-card {
-  background-color: #F9F5EC; /* Exact Figma cream color */
+  background-color: #f9f5ec; /* Exact Figma cream color */
   border-radius: 20px;
   opacity: 0.99;
   padding: 12px;
   max-width: 700px;
   /* width: 90%; */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   height: fit-content;
 }
 
@@ -958,7 +957,7 @@ li {
 }
 
 .card-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 18px;
   font-weight: 900;
   color: #000;
@@ -966,7 +965,7 @@ li {
 }
 
 .card-text {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
   line-height: 1.2;
   color: #000000;
@@ -979,8 +978,76 @@ li {
     text-align: center;
     align-items: center;
   }
-  
+
   .health-container {
     height: 500px;
   }
+}
+
+/* Faq Section ... */
+
+.faq-section {
+  background-color: #F0F8FB; /* Matches Rectangle 6/9 cream color */
+  padding: 100px 20px;
+  width: 100%;
+}
+
+.faq-container {
+  max-width: 800px; /* Narrower width for better readability when centered */
+  margin: 0 auto;
+  text-align: center; /* FIX: Centers the header text */
+}
+
+.hero-title-faq {
+  font-size: 24px; 
+  line-height: 1.1;
+  color: #000000;
+  margin-bottom: 60px; 
+  text-transform: uppercase;
+}
+
+.hero-title-faq span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Accordion Styles */
+.faq-accordion {
+  text-align: left;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.faq-item summary {
+  list-style: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Custom + icon */
+.faq-item summary::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.faq-item[open] summary::after {
+  content: '−'; /* Change to minus when open */
+}
+
+.faq-answer {
+  padding-top: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
 }
