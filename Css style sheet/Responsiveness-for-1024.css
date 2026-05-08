@@ -1,0 +1,415 @@
+/* ============================================
+   RESPONSIVE — 1024px TABLET BREAKPOINT
+   Targeting your exact class names
+   ============================================ */
+
+@media (max-width: 1024px) {
+  /* ── ANNOUNCEMENT BAR ── */
+  .announcement-bar {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  /* ── NAV BAR ── */
+  .nav-bar {
+    padding: 12px 4%;
+    height: 64px;
+  }
+
+  .logo-nav-items ul {
+    gap: 16px;
+  }
+
+  /* ── HERO / MAIN SECTION ── */
+  .main-section {
+    height: auto;
+    min-height: 80vh;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 5%;
+    gap: 30px;
+  }
+
+  .txt-main {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin: 16px 0;
+    width: 75%;
+  }
+
+  .chips {
+    max-width: 80%;
+  }
+
+  .chips-icons {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  .col-left {
+    padding-right: 20px;
+  }
+
+  .col-right img {
+    max-width: 100%;
+  }
+
+  /* ── BOTTOM STRIP (cream section) ── */
+  .section-btm {
+    height: auto;
+    padding: 60px 5%;
+  }
+  .prgrph{
+    width: 55%;
+  }
+
+  .btm-heading {
+    font-size: 26px;
+  }
+
+  .btm-para {
+    font-size: 13px;
+  }
+
+  .floating-obj {
+    width: 70px;
+  }
+
+  /* ── BUNDLE SECTION ── */
+  .bundle-section {
+    padding: 80px 4%;
+  }
+
+  .bundle-header h2,
+  .bundle-header span {
+    font-size: 20px;
+  }
+
+  .bundle-grid {
+    max-width: 100%;
+    gap: 0;
+  }
+
+  .bundle-card,
+  .bundle-card-3 {
+    padding: 14px 10px;
+  }
+
+  .card-details h3 {
+    font-size: 14px;
+  }
+
+  .old-price {
+    font-size: 15px;
+  }
+
+  .current-price {
+    font-size: 17px;
+  }
+
+  .buy-btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+
+  .badge-info,
+  .badge-save {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  /* ── LOGO STRIP ── */
+  .logo-section {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 40px 4%;
+  }
+
+  .logo-grid {
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+  .logo-grid img {
+    height: 22px;
+  }
+
+  /* ── FEATURES SECTION (3 feature cards) ── */
+  .features-section {
+    padding: 60px 4%;
+  }
+
+  .features-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+
+  .feature-card {
+    padding: 0 20px;
+    gap: 14px;
+  }
+
+  .feature-text h3 {
+    font-size: 15px;
+  }
+
+  .feature-text p {
+    font-size: 13px;
+  }
+  /* Main 2 section..... */
+.main-section-2 {
+    height: auto;
+    min-height: 80vh;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 5%;
+    gap: 30px;
+  }
+
+  .txt-main-2{
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .description-2 {
+    font-size: 16px;
+    margin: 16px 0;
+    width: 75%;
+  }
+
+
+  .col-left-2 {
+    padding-right: 20px;
+  }
+
+  .col-right-2 img {
+    max-width: 100%;
+  }
+
+  /* ── VIRUSES / POLLUTANTS SECTION ── */
+  .viruses-section {
+    padding: 50px 4%;
+  }
+
+  .features-grid-section {
+    padding: 0 4% 60px;
+  }
+
+  .features-container-2 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .feature-card-2 h3 {
+    font-size: 15px;
+  }
+
+  .feature-card-2 p {
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  .feature-image {
+    height: 150px;
+    margin-bottom: 16px;
+  }
+
+  /* ── VIRAL RATES (SARS / H1N1 / H7N9 / Covid) ── */
+  .viral-rates {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .viral-rate-card h3 {
+    font-size: 22px;
+  }
+
+  .percentage {
+    font-size: 24px;
+  }
+
+  .viral-rate-card p {
+    font-size: 12px;
+  }
+
+  /* ── PREVENTIONS SECTION ── */
+  .preventions-section {
+    padding: 48px 4% 32px;
+  }
+
+  .main-txt .headline {
+    font-size: 26px;
+  }
+
+  .main-txt .eyebrow {
+    font-size: 18px;
+  }
+
+  .main-txt .subtext {
+    font-size: 13px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .feature-title {
+    font-size: 14px;
+  }
+
+  .feature-desc {
+    font-size: 13px;
+  }
+
+  .video-wrapper {
+    min-height: 280px;
+  }
+
+  /* ── HERO FLEX (black section) ── */
+  .hero-flex {
+    height: auto;
+    min-height: 70vh;
+    padding: 60px 0;
+  }
+
+  .hero-left-1 {
+    padding: 0 4% 0 6%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtext {
+    font-size: 13px;
+    margin-bottom: 32px;
+  }
+
+  .hero-cta {
+    padding: 14px 24px;
+    font-size: 12px;
+  }
+
+  /* ── HEALTH ENVIRONMENT SECTION ── */
+  .health-container {
+    height: 80vh;
+    padding-top: 30px;
+  }
+
+  .info-card {
+    max-width: 560px;
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-text {
+    font-size: 11px;
+  }
+
+  /* ── FAQ SECTION ── */
+  .faq-section {
+    padding: 70px 4%;
+  }
+
+  .hero-title-faq {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .faq-item summary {
+    font-size: 15px;
+  }
+
+  /* ── ABOUT US SECTION (bg image section) ── */
+  .about-us-section {
+    height: 640px;
+  }
+
+  .about-content {
+    max-width: 100%;
+    padding: 0 4%;
+  }
+
+  .hero-left {
+    gap: 12px;
+  }
+
+  /* ── NEWSLETTER SECTION ── */
+  .newsletter-section {
+    padding: 80px 4%;
+  }
+
+  .newsletter-container {
+    gap: 24px;
+  }
+
+  .newsletter-heading {
+    font-size: 48px;
+  }
+
+  .newsletter-left {
+    max-width: 480px;
+  }
+
+  .email-input {
+    width: 100%; /* fix: overrides the hardcoded 900px width */
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .subscribe-btn {
+    font-size: 13px;
+    padding: 12px 18px;
+    white-space: nowrap;
+  }
+
+  .purifier-img {
+    max-width: 100%;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 50px 4% 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 0.7fr 1fr 1fr 1.2fr;
+    gap: 24px;
+  }
+
+  .logo-text {
+    font-size: 28px;
+  }
+
+  .footer-col-title {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a,
+  .footer-social a {
+    font-size: 13px;
+  }
+
+  .footer-links {
+    gap: 10px;
+  }
+
+  .footer-social {
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}

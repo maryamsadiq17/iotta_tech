@@ -1,0 +1,143 @@
+/* ============================================
+   RESPONSIVE — 425px (Mobile L)
+   ============================================ */
+
+@media (max-width: 425px) {
+  
+  /* ── NAV BAR ── */
+  .nav-bar {
+    padding: 10px 5%;
+    height: 60px;
+  }
+
+  .logo-nav-items ul {
+    display: none; /* Hide desktop menu for mobile */
+  }
+
+  /* ── HERO SECTION ── */
+  .main-section {
+    grid-template-columns: 1fr; /* Stack columns */
+    height: auto;
+    padding: 40px 5% 0;
+    text-align: center;
+  }
+
+  .col-left {
+    padding-right: 0;
+    order: 2; /* Move text below image */
+  }
+
+  .txt-main {
+    font-size: 36px;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+
+  .chips {
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .description {
+    font-size: 15px;
+    margin: 15px auto;
+    max-width: 100%;
+  }
+
+  .col-right {
+    order: 1; /* Move product image to top */
+  }
+
+  .col-right img {
+    max-width: 280px;
+  }
+
+  /* ── BUNDLE SECTION ── */
+  .bundle-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 30px;
+  }
+
+  .bundle-card, .bundle-card-3 {
+    border-right: none;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 40px;
+  }
+
+  /* ── FEATURES / ANTI-VIRAL RATES ── */
+  .features-container-2, 
+  .viral-rates,
+  .features-grid {
+    grid-template-columns: 1fr 1fr; /* 2x2 grid for mobile */
+    gap: 15px;
+  }
+
+  .percentage {
+    font-size: 24px;
+  }
+
+  /* ── PREVENTIONS SECTION ── */
+  .video-wrapper {
+    min-height: 200px;
+  }
+
+  .feature-desc {
+    font-size: 14px;
+  }
+
+  /* ── HEALTHY ENVIRONMENT (Floating Card) ── */
+  .health-container {
+    height: 80vh;
+    padding-top: 20px;
+  }
+
+  .info-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .card-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  /* ── FAQ ── */
+  .hero-title-faq {
+    font-size: 22px;
+  }
+
+  .faq-item summary {
+    font-size: 16px;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .email-input {
+    width: 100% !important; /* Force full width */
+  }
+
+  .subscribe-btn {
+    width: 100%;
+  }
+
+  /* ── FOOTER ── */
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack all footer columns */
+    text-align: center;
+    gap: 40px;
+  }
+
+  .footer-logo, .footer-social a {
+    justify-content: center;
+  }
+}

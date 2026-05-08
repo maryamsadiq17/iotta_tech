@@ -71,6 +71,7 @@ li {
 }
 
 /* Main Section... */
+/* Main Section... */
 .main-section {
   height: 100vh;
   display: grid;
@@ -89,10 +90,11 @@ li {
 
 .txt-main {
   font-family: "Playfair Display", serif;
-  font-size: 42px;
+  font-size: 64px;
   line-height: 1.1;
   color: #1a1a1a;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+  max-width: 468px;
 }
 
 .bold-text {
@@ -106,7 +108,7 @@ li {
   flex-wrap: wrap;
   gap: 10px 12px;
   list-style: none;
-  max-width: 450px;
+  max-width: 400px;
 }
 
 .chips-icons {
@@ -124,6 +126,7 @@ li {
   color: #444;
   line-height: 1.4;
   margin: 25px 0;
+  max-width: 324px;
 }
 
 .buy-btn {
@@ -149,11 +152,10 @@ li {
 }
 
 .col-right img {
-  max-width: 100%;
+  max-width: 568px;
   height: auto;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
 }
-
 /* bottom section */
 
 .section-btm {
@@ -422,19 +424,74 @@ li {
   line-height: 1.5;
   color: #444;
 }
+/* Main 2 Section..... */
 
-/* Responsive Fix */
-@media (max-width: 900px) {
-  .features-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+.main-section-2 {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  padding: 0 10%;
+  align-items: center;
+  position: relative;
+}
 
-  .border-left {
-    border-left: none;
-    border-top: 1px solid #d1dce0;
-    padding-top: 40px;
-  }
+.col-left-2 {
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+.txt-main-2 {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  max-width: 468px;
+}
+
+.bold-text-2 {
+  font-weight: 900;
+}
+
+
+
+.description-2 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.4;
+  margin: 25px 0;
+  max-width: 324px;
+}
+
+.buy-btn-2 {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: auto;
+  align-self: center;   /* ← this line forces the button to center itself */
+}
+
+.buy-btn-2:hover {
+  transform: scale(1.05);
+}
+
+.col-right-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.col-right-2 img {
+  max-width: 568px;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
 }
 
 /* Pollens grid section */
@@ -542,18 +599,6 @@ li {
   max-width: 260px;
 }
 
-/* Responsive adjustment for tablets and phones */
-@media (max-width: 1024px) {
-  .features-container-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .features-container-2 {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Anti-viral Rates */
 .viral-rates {
@@ -599,16 +644,7 @@ li {
 .viral-rate-card:hover {
   transform: scale(1.03);
 }
-@media (max-idth: 900px) {
-  .viral-rates {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-idth: 500px) {
-  .viral-rates {
-    grid-template-columns: 1fr;
-  }
-}
+
 /* ── Section wrapper ── */
 .preventions-section {
   max-width: 1100px;
@@ -794,21 +830,6 @@ li {
   flex-shrink: 0;
 }
 
-/* ── Responsive ── */
-@media (max-width: 640px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-
-  .main-txt .headline {
-    font-size: 24px;
-  }
-  .main-txt .eyebrow {
-    font-size: 18px;
-  }
-}
-
 .hero-flex {
   display: flex;
   background-color: #000000;
@@ -903,27 +924,6 @@ li {
   z-index: 5;
 }
 
-/* ── Mobile ── */
-@media (max-width: 900px) {
-  .hero-flex {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-  }
-  .hero-left {
-    padding: 60px 20px;
-    align-items: center;
-  }
-  .hero-right {
-    width: 100%;
-    height: 350px;
-  }
-  .hero-gradient-overlay {
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to bottom, #000000 0%, transparent 100%);
-  }
-}
 
 /* Healthy environment section */
 
@@ -990,18 +990,6 @@ li {
   color: #000000;
 }
 
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-  .card-content {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .health-container {
-    height: 500px;
-  }
-}
 
 /* Faq Section ... */
 
@@ -1285,24 +1273,6 @@ li {
   object-fit: fit;
 }
 
-/* ── Responsive ── */
-@media (max-width: 768px) {
-  .newsletter-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .newsletter-left {
-    max-width: 100%;
-    align-items: center;
-  }
-
-  .newsletter-right {
-    width: 100%;
-    max-width: 260px;
-  }
-}
 /* Fooetr Section */
 .footer {
   background-color: #0d0d0d;     /* near-black from the design */
@@ -1411,20 +1381,3 @@ li {
   margin: 0;
 }
 
-/* ── Responsive ── */
-@media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
-  }
-
-  .footer-logo {
-    grid-column: 1 / -1;         /* logo spans full width on mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-}

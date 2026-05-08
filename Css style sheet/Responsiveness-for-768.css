@@ -1,0 +1,181 @@
+/* ============================================
+   RESPONSIVE — 768px (Small Tablet)
+   Hero / Main Section
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* ── ANNOUNCEMENT BAR ── */
+  .announcement-bar {
+    font-size: 12px;
+    height: auto;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  /* ── NAV BAR ── */
+  .nav-bar {
+    padding: 10px 4%;
+    height: 56px;
+  }
+
+  .logo-nav-items img {
+    height: 28px;
+  }
+
+  .logo-nav-items ul {
+    gap: 14px;
+  }
+
+  .logo-nav-items ul li {
+    font-size: 14px;
+  }
+
+  /* ── MAIN HERO SECTION ── */
+  .main-section {
+    /* height: auto;
+    min-height: unset; */
+    grid-template-columns: 1fr 1fr; /* still 2 columns at 768 like Figma */
+    /* padding: 30px 4%; */
+    gap: 16px;
+    align-items: center;
+  }
+
+  /* ── LEFT COLUMN ── */
+  .col-left {
+    padding-right: 10px;
+  }
+
+  .txt-main {
+    font-size: 42px; /* matches the large text in the screenshot */
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  /* Chips — wrap into 2 per row like Figma */
+  .chips {
+    gap: 8px;
+    margin-bottom: 16px;
+    max-width: 70%;
+  }
+
+  .chips-icons {
+    font-size: 12px;
+    padding: 6px 10px;
+    gap: 5px;
+  }
+
+  .chips-icons img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 14px 0;
+    color: #333;
+    width: 100%;
+  }
+
+  /* Buy Now Button */
+  .buy-btn {
+    font-size: 14px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* ── RIGHT COLUMN ── */
+  .col-right {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .col-right img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+  .prgrph {
+    /* Reducing padding for tablet to give text more horizontal space */
+    padding: 40px 10%;
+    width: auto;
+  }
+
+  .btm-heading {
+    /* Scale down the 34px font for a cleaner tablet look */
+    font-size: 24px;
+    width: 540px;
+    line-height: 1.1; /* Slightly looser than mobile but still tight */
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .btm-para {
+    /* Keep the font readable at 14px but adjust the width */
+    font-size: 14px;
+    line-height: 1.5; /* Increased line-height for better readability */
+    max-width: 500px; /* Prevents the text from stretching too wide */
+    margin: 0 auto;
+  }
+  .logo-grid {
+    width: 70%;
+  }
+}
+/* Main 2 Section */
+  .main-section-2 {
+    /* height: auto;
+    min-height: unset; */
+    grid-template-columns: 1fr 1fr; /* still 2 columns at 768 like Figma */
+    /* padding: 30px 4%; */
+    gap: 16px;
+    align-items: center;
+  }
+
+  /* ── LEFT COLUMN ── */
+  .col-left-2 {
+    padding-right: 10px;
+  }
+
+  .txt-main-2 {
+    font-size: 42px; /* matches the large text in the screenshot */
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+
+  .description-2 {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 14px 0;
+    color: #333;
+    width: 100%;
+  }
+
+  /* Buy Now Button */
+  .buy-btn-2 {
+    font-size: 14px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* ── RIGHT COLUMN ── */
+  .col-right-2 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .col-right-2 img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
