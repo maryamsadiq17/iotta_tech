@@ -82,7 +82,6 @@ li {
 
 .col-left {
   max-width: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   padding-right: 40px;
@@ -163,7 +162,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 178px;
   gap: 30px;
   background-color: #f9f5ec;
   overflow: visible;
@@ -189,7 +187,6 @@ li {
 }
 
 .prgrph {
-  max-width: 700px;
   margin: 0 auto;
   text-align: center;
   padding: 60px 20px;
@@ -197,19 +194,18 @@ li {
 
 .btm-heading {
   font-family: "Playfair Display", serif;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1;
+  letter-spacing: -0.25%;
   margin-bottom: 14px;
   color: #1a1a1a;
 }
 
 .btm-para {
-  font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.2;
   color: #333;
-  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -1221,17 +1217,17 @@ li {
 /* ── Form ── */
 .newsletter-form {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  gap: 16px;
   margin-top: 8px;
 }
 
 .email-input {
-  width: 100%;
-  padding: 15px 18px;
+  width: 900px;
+  padding: 15px 24px;
   border: 1px ;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   background: #ffffff;
   box-sizing: border-box;
@@ -1253,7 +1249,7 @@ li {
   justify-content: space-between;
   gap: 10px;
   width: 100%;
-  padding: 15px 24px;
+  padding: 12px 24px;
   background-color: #1a1a1a;    /* black button */
   color: #ffffff;
   border: none;
