@@ -125,8 +125,7 @@
   .logo-grid {
     width: 70%;
   }
-}
-/* Main 2 Section */
+  /* Main 2 Section */
   .main-section-2 {
     /* height: auto;
     min-height: unset; */
@@ -179,3 +178,6 @@
     max-width: none;
     height: auto;
   }
+}
+
+

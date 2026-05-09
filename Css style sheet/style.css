@@ -152,7 +152,7 @@ li {
 }
 
 .col-right img {
-  max-width: 568px;
+  max-width: 100%;
   height: auto;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
 }
@@ -212,6 +212,10 @@ li {
 }
 
 /* ...bundle-section... */
+.bundle-arrows {
+  display: none;
+}
+
 .bundle-section {
   padding: 60px 5%;
   background-color: #fff;

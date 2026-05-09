@@ -1,143 +1,1189 @@
 /* ============================================
-   RESPONSIVE — 425px (Mobile L)
+   MOBILE RESPONSIVE — 425px & below
+   Based on exact Figma section screenshots
+   Add at the VERY BOTTOM of your style.css
    ============================================ */
 
+/* Global overflow fix — stops horizontal scrollbar */
+* {
+  box-sizing: border-box;
+}
+
 @media (max-width: 425px) {
-  
-  /* ── NAV BAR ── */
+  /* ── GLOBAL OVERFLOW FIX ── */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ================================================
+     1. ANNOUNCEMENT BAR
+     Figma: "Free shipping 2 Days | Shop Now" — centered
+  ================================================ */
+  .announcement-bar {
+    font-size: 12px;
+    height: auto;
+    padding: 8px 12px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .announcement-bar a {
+    padding: 4px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* ================================================
+     2. NAV BAR
+     Figma: iO logo left | About us + Contact center | cart right
+  ================================================ */
   .nav-bar {
     padding: 10px 5%;
-    height: 60px;
+    height: auto;
+    min-height: 52px;
+  }
+
+  .logo-nav-items {
+    align-items: center;
+    gap: 0;
+  }
+
+  .logo-nav-items img {
+    height: 26px;
+    width: auto;
   }
 
   .logo-nav-items ul {
-    display: none; /* Hide desktop menu for mobile */
+    gap: 14px;
+    margin-left: 14px;
   }
 
-  /* ── HERO SECTION ── */
-  .main-section {
-    grid-template-columns: 1fr; /* Stack columns */
-    height: auto;
-    padding: 40px 5% 0;
+  .logo-nav-items ul li {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .cart-icon img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ================================================
+     3. HERO / MAIN SECTION
+     Figma: product image TOP (full width, light blue bg)
+             text + chips + button BELOW
+  ================================================ */
+  @media (max-width: 425px) {
+    .main-section {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    /* ── IMAGE AREA ── */
+    .col-right {
+      order: -1;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        #d6e4f7 0%,
+        #e8f2fc 40%,
+        #fcfcfc 100%
+      );
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 5%;
+      min-height: 320px;
+    }
+
+    .col-right img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.1));
+    }
+
+    /* ── TEXT AREA ── */
+    .col-left {
+      padding: 28px 6% 20px; /* equal left/right padding */
+      text-align: center;
+      margin-bottom: 40px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* centers all children */
+    }
+
+    .txt-main {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      max-width: 70%; /* was 70% — caused cramped text */
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ── CHIPS ── */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      max-width: 75%;
+      padding: 0;
+      list-style: none;
+    }
+
+    .chips-icons {
+      font-size: 13px;
+      padding: 7px 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #f3f5f7;
+      border-radius: 50px;
+      white-space: nowrap; /* stops chip text from wrapping */
+    }
+
+    .chips-icons img {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* ── DESCRIPTION ── */
+    .description {
+      font-size: 14px;
+      line-height: 1.65;
+      margin: 12px auto 20px;
+      max-width: 100%; /* was 70% — caused overflow */
+      width: 100%;
+      text-align: center;
+      color: #444;
+    }
+
+    /* ── BUY NOW BUTTON — full width like Figma ── */
+    .col-left .buy-btn {
+      width: 100%; /* full width */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-top: 4px;
+    }
+  }
+
+  /* ================================================
+     4. CREAM STRIP (Improved air quality section)
+     Figma: centered heading + para, floating objects
+  ================================================ */
+  @media (max-width: 425px) {
+    /* ── WRAPPER to allow overflow from section ── */
+    .section-btm {
+      height: auto;
+      padding: 70px 8% 70px; /* 8% horizontal padding keeps text away from edges */
+      overflow: visible;
+      position: relative;
+      z-index: 0;
+      background-color: #f9f5ec;
+    }
+
+    /* Centers the paragraph block itself */
+    .prgrph {
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btm-heading {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      text-align: center;
+      color: #1a1a1a;
+      width: 80%; /* full width so no text gets cut */
+      max-width: 100%;
+    }
+
+    .btm-para {
+      font-size: 12px;
+      line-height: 1.65;
+      text-align: center;
+      color: #333;
+      width: 90%;
+      max-width: 100%;
+    }
+
+    /* ── FLOATING OBJECTS ── */
+    .floating-obj {
+      width: 70px; /* slightly bigger so visible on mobile */
+      z-index: 10;
+      position: absolute;
+    }
+
+    .obj-top-left {
+      top: 0;
+      left: 0;
+      transform: translateY(-50%); /* half sticks above section */
+      z-index: 10;
+    }
+
+    .obj-btm-right {
+      bottom: 0;
+      right: 0;
+      transform: translateY(50%); /* half sticks below section */
+      z-index: 10;
+    }
+  }
+
+  /* ================================================
+     5. BUNDLE SECTION
+     Figma: header centered, cards as SLIDER (1 card visible)
+             card shows: badges, image, name, price, button
+  ================================================ */
+ /* ── BUNDLE SECTION ── */
+/* Hide dots/arrows on all screens */
+
+  .bundle-section {
+    padding: 36px 5%;
+    overflow: hidden;
+  }
+
+  .bundle-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 24px;
     text-align: center;
   }
 
-  .col-left {
-    padding-right: 0;
-    order: 2; /* Move text below image */
+  .bundle-header h2 {
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
   }
 
-  .txt-main {
-    font-size: 36px;
-    margin: 20px auto;
-    max-width: 100%;
+  .bundle-header span {
+    font-size: 20px;
+    font-weight: 400;
   }
 
-  .chips {
-    justify-content: center;
-    max-width: 100%;
-  }
-
-  .description {
-    font-size: 15px;
-    margin: 15px auto;
-    max-width: 100%;
-  }
-
-  .col-right {
-    order: 1; /* Move product image to top */
-  }
-
-  .col-right img {
-    max-width: 280px;
-  }
-
-  /* ── BUNDLE SECTION ── */
+  /* ── Scrollable slider ── */
   .bundle-grid {
-    grid-template-columns: 1fr; /* Stack cards vertically */
-    gap: 30px;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 12px;
+    width: 100%;
+    padding-bottom: 4px;
   }
 
-  .bundle-card, .bundle-card-3 {
-    border-right: none;
-    border-bottom: 1px solid #ededed;
-    padding-bottom: 40px;
+  .bundle-grid::-webkit-scrollbar {
+    display: none;
   }
 
-  /* ── FEATURES / ANTI-VIRAL RATES ── */
-  .features-container-2, 
-  .viral-rates,
-  .features-grid {
-    grid-template-columns: 1fr 1fr; /* 2x2 grid for mobile */
-    gap: 15px;
+  /* ── Each card — full width, snaps ── */
+  .bundle-card,
+  .bundle-card-3 {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 0;
+    scroll-snap-align: start;
+    border: 1px solid #ededed !important;
+    border-radius: 12px;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+  }
+
+  .card-badges {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .badge-info,
+  .badge-save {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .product-img {
+    width: 100%;
+    margin: 16px 0;
+  }
+
+  .product-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .card-details h3 {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+
+  .price-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .old-price {
+    font-size: 16px;
+    color: #c0c0c0;
+    text-decoration: line-through;
+  }
+
+  .current-price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #000;
+  }
+
+  .bundle-card .buy-btn,
+  .bundle-card-3 .buy-btn {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 0;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* ── Arrows ── */
+  .bundle-arrows {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 0 4px;
+  }
+
+  .bundle-arrow-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: background 0.2s;
+  }
+
+  .bundle-arrow-btn:hover {
+    background: #f0f0f0;
+  }
+  /* ================================================
+     6. LOGO STRIP (black section)
+     Figma: logos wrap in 3-4 per row, centered
+  ================================================ */
+  .logo-section {
+    padding: 36px 5%;
+    overflow: hidden;
+  }
+
+  .logo-section .section-title {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .logo-grid {
+    gap: 20px 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    width: 80%;
+  }
+
+  .logo-grid img {
+    height: 18px;
+  }
+
+  /* ================================================
+     7. FEATURES SECTION (3 feature cards)
+     Figma: stacked vertically, icon left + text right
+  ================================================ */
+  .features-section {
+    padding: 36px 5%;
+    overflow: hidden;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .feature-card {
+    padding: 0;
+    gap: 14px;
+  }
+
+  .border-left {
+    border-left: none;
+    border-top: 1px solid #d1dce0;
+    padding-top: 24px;
+  }
+
+  .feature-text h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .feature-text p {
+    font-size: 13px;
+  }
+
+  /* ================================================
+     8. MAIN SECTION 2 (clean air / advanced sensing)
+     Figma: image TOP full width, text below centered
+  ================================================ */
+  .main-section-2 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .col-right-2 {
+    order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 8%;
+    background-color: #f5f5f5;
+  }
+
+  .col-right-2 img {
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+  }
+
+  .col-left-2 {
+    padding: 28px 6% 20px; /* equal left/right padding */
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .txt-main-2 {
+    font-size: 30px;
+    line-height: 1.2;
+    max-width: 85%; /* was 70% — caused cramped text */
+    width: 100%;
+    text-align: center;
+  }
+
+  .description-2 {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .buy-btn-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ================================================
+     9. VIRUSES / POLLUTANTS SECTION
+     Figma: heading left-aligned, 2x2 grid of cards
+  ================================================ */
+  .viruses-section {
+    background-color: #f9f5ec;
+    padding: 36px 0 0 0; /* remove horizontal padding here, */
+    overflow: visible; /* let children control their own padding */
+  }
+
+  /* Heading + para block */
+  .viruses-section .prgrph {
+    text-align: left;
+    padding: 0 5% 24px 5%; /* controlled padding on text only */
+    width: 100%;
+  }
+
+  .viruses-section .btm-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: left;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    max-width: 100%;
+  }
+
+  .viruses-section .btm-para {
+    font-size: 13px;
+    line-height: 1.65;
+    text-align: center; /* Figma shows para centered under heading */
+    color: #555;
+    max-width: 100%;
+  }
+
+  /* ================================================
+     POLLUTANTS GRID SECTION
+  ================================================ */
+
+  /* ================================================
+     VIRUSES SECTION — wrapper
+  ================================================ */
+  .viruses-section {
+    background-color: #f9f5ec;
+    padding: 40px 5% 0;
+    overflow: visible;
+  }
+
+  /* ── Heading + Para — CENTERED like Figma ── */
+  .viruses-section .prgrph {
+    text-align: center; /* Figma: centered, NOT left */
+    padding: 0 0 28px 0;
+    width: 100%;
+  }
+
+  .viruses-section .btm-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center; /* centered like Figma */
+    color: #1a1a1a;
+    margin-bottom: 14px;
+    width: 85%;
+  }
+
+  .viruses-section .btm-para {
+    font-size: 13px;
+    line-height: 1.65;
+    text-align: center;
+    color: #555;
+    max-width: 80%;
+  }
+
+  /* ================================================
+     GRID SECTION
+  ================================================ */
+  .features-grid-section {
+    padding: 0 4% 40px;
+    overflow: hidden;
+  }
+
+  .features-container-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* ── Card: white box, image on top, text centered below ── */
+  .feature-card-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Image fills top portion of card with cream bg */
+  .feature-image {
+    /* width: 100%; */
+    /* height: 140px; */
+    background-color: #f9f5ec; /* cream bg behind sketch images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .feature-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* Text area below image */
+  .feature-card-2 h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin: 12px 12px 6px;
+    line-height: 1.2;
+  }
+
+  .feature-card-2 p {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    line-height: 1.55;
+    color: #555;
+    text-align: center;
+    margin: 0 12px 14px;
+    padding: 0;
+  }
+
+  /* ================================================
+     VIRAL RATES — 2x2 black cards
+  ================================================ */
+  .viral-rates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 16px 4% 30px;
+    max-width: 100%;
+    background-color: #f9f5ec;
+    box-sizing: border-box;
+  }
+
+  .viral-rate-card {
+    background-color: #000;
+    color: #fff;
+    padding: 22px 10px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .viral-rate-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: 0;
+    color: #fff;
+  }
+
+  .viral-rate-card p {
+    font-size: 11px;
+    opacity: 0.75;
+    margin-bottom: 8px;
+    color: #fff;
   }
 
   .percentage {
     font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
   }
 
-  /* ── PREVENTIONS SECTION ── */
+  /* ================================================
+     11. PREVENTIONS SECTION
+     Figma: text centered, video below, 2x2 feature grid
+  ================================================ */
+  .preventions-section {
+    padding: 40px 5% 32px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .main-txt .eyebrow {
+    font-size: 16px;
+  }
+
+  .main-txt .headline {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .main-txt .subtext {
+    font-size: 14px;
+    max-width: 90%;
+    line-height: 1.65;
+  }
+
   .video-wrapper {
     min-height: 200px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* 2x2 grid */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 20px;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .feature-item {
+    gap: 8px;
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .feature-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .feature-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    width: 70%;
+    text-align: center;
   }
 
   .feature-desc {
     font-size: 14px;
+    width: 80%;
+    text-align: center;
+    line-height: 1.5;
   }
 
-  /* ── HEALTHY ENVIRONMENT (Floating Card) ── */
+  .cta-button {
+    font-size: 13px;
+    padding: 14px 28px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ================================================
+     12. HERO FLEX (black "Perfect for every room" section)
+     Figma: stacked — text TOP centered, image BOTTOM
+  ================================================ */
+  .hero-flex {
+    flex-direction: column;
+    height: auto;
+    min-height: unset;
+    padding: 0;
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  .hero-left-1 {
+    padding: 40px 6% 32px;
+    text-align: center;
+    align-items: center;
+    order: 1;
+  }
+
+  .brand-logo {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .hero-subtext {
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero-cta {
+    padding: 14px 24px;
+    font-size: 12px;
+    border-radius: 8px;
+    justify-content: center;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-right {
+    order: 2;
+    width: 100%;
+    height: 300px;
+    flex: none;
+    position: relative;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-gradient-overlay {
+    width: 100%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #000 0%, transparent 100%);
+  }
+
+  /* ================================================
+     13. HEALTH ENVIRONMENT SECTION
+     Figma: card at TOP of bg image, stacked content
+             icon centered, title centered, text centered
+  ================================================ */
+  .health-environment {
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+
   .health-container {
-    height: 80vh;
-    padding-top: 20px;
+    height: auto;
+    min-height: 520px;
+    padding: 24px 5%;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   .info-card {
-    width: 95%;
-    padding: 15px;
+        width: 85%;
+    border-radius: 16px;
   }
 
   .card-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 15px;
+    gap: 12px;
   }
 
-  /* ── FAQ ── */
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-wrapper img,
+  .icon-wrapper svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    line-height: 1.3;
+    text-align: center;
+    }
+
+  .card-text {
+    font-size: 12px;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  /* ================================================
+     14. FAQ SECTION
+     Figma: "FREQUENTLY / ASKED QUESTIONS" centered uppercase
+             accordion items full width
+  ================================================ */
+  .faq-section {
+    padding: 50px 5%;
+    overflow: hidden;
+  }
+
+  .faq-container {
+    max-width: 100%;
+  }
+
   .hero-title-faq {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  .faq-accordion {
+    width: 100%;
+  }
+
+  .faq-item {
+    padding: 18px 0;
   }
 
   .faq-item summary {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    padding-right: 8px;
   }
 
-  /* ── NEWSLETTER ── */
+  .faq-item summary::after {
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+
+  .faq-answer p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* ================================================
+     15. ABOUT US SECTION (bg image, "Perfect for every room")
+     Figma: full screen bg image with overlay text centered
+  ================================================ */
+  .about-us-section {
+    height: 100vw;
+    min-height: 380px;
+    max-height: 500px;
+    overflow: hidden;
+  }
+
+  .about-content {
+    padding: 0 6%;
+    max-width: 100%;
+  }
+
+  .hero-left {
+    gap: 10px;
+    align-items: center;
+  }
+
+  /* Reusing .hero-title inside about section */
+  .about-us-section .hero-title {
+    font-size: 26px;
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+  }
+
+  .about-us-section .hero-subtext {
+    font-size: 13px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-us-section .hero-cta {
+    padding: 12px 22px;
+    font-size: 12px;
+  }
+
+  /* ================================================
+     16. NEWSLETTER SECTION
+     Figma: image TOP centered, text below,
+             input stacked above full-width button
+  ================================================ */
+  .newsletter-section {
+    padding: 0 0 40px;
+    overflow: hidden;
+  }
+
   .newsletter-container {
     flex-direction: column;
-    text-align: center;
+    gap: 0;
+    align-items: center;
   }
 
+  /* Image TOP */
+  .newsletter-right {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+    padding: 30px 10% 10px;
+    background-color: #f5efe6;
+  }
+
+  .purifier-img {
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Text + form below */
+  .newsletter-left {
+    max-width: 100%;
+    width: 100%;
+    padding: 28px 5% 0;
+    gap: 12px;
+    align-items: center;
+    background-color: #f5efe6;
+  }
+
+  .newsletter-heading {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .newsletter-subtext {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  /* Stack input and button vertically */
   .newsletter-form {
     flex-direction: column;
+    gap: 10px;
     width: 100%;
   }
 
   .email-input {
-    width: 100% !important; /* Force full width */
+    width: 100% !important; /* override hardcoded 900px */
+    font-size: 14px;
+    padding: 14px 16px;
+    border: 1px solid #ddd !important;
+    border-radius: 6px;
   }
 
   .subscribe-btn {
     width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 14px 20px;
+    white-space: nowrap;
+    letter-spacing: 1px;
   }
 
-  /* ── FOOTER ── */
+  /* ================================================
+     17. FOOTER
+     Figma: logo top-left, Business + Resources side by side,
+             Stay tuned full width with 2-col social links
+  ================================================ */
+  .footer {
+    padding: 40px 5% 0;
+    overflow: hidden;
+  }
+
   .footer-container {
-    grid-template-columns: 1fr; /* Stack all footer columns */
-    text-align: center;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 16px;
+    max-width: 100%;
   }
 
-  .footer-logo, .footer-social a {
-    justify-content: center;
+  /* Logo spans full width */
+  .footer-logo {
+    grid-column: 1 / -1;
+    margin-bottom: 8px;
   }
-}
+
+  .logo-text {
+    font-size: 32px;
+  }
+
+  .footer-col-title {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: #cccccc;
+  }
+
+  /* Stay tuned — full width */
+  .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-social {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2-col layout like Figma */
+    /* gap: 16px 12px; */
+  }
+
+  .footer-social a {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .social-icon img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ── FOOTER BOTTOM BAR ── */
+  .footer-bottom {
+    padding: 16px 5%;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    text-align: center;
+  }
+} /* end @media 425px */
