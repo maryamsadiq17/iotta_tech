@@ -85,107 +85,76 @@
   ================================================ */
   @media (max-width: 425px) {
     .main-section {
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      gap: 0;
-      overflow: hidden;
+      padding: 0px 0px 40px 0px;
+    }
+
+    .main-container {
+      flex-direction: column-reverse;
+        gap: 30px;
     }
 
     /* ── IMAGE AREA ── */
     .col-right {
-      order: -1;
-      width: 100%;
+      flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
       background: linear-gradient(
         180deg,
         #d6e4f7 0%,
         #e8f2fc 40%,
         #fcfcfc 100%
       );
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 5%;
-      min-height: 320px;
     }
 
     .col-right img {
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.1));
+      width: 130%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    margin-left: -190px;
     }
 
     /* ── TEXT AREA ── */
     .col-left {
-      padding: 28px 6% 20px; /* equal left/right padding */
-      text-align: center;
-      margin-bottom: 40px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* centers all children */
+     flex: 1;
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* centers all children */
     }
 
-    .txt-main {
-      font-size: 30px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      max-width: 70%; /* was 70% — caused cramped text */
-      width: 100%;
-      text-align: center;
+    .col-left h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
     }
-
-    /* ── CHIPS ── */
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 16px;
-      max-width: 75%;
-      padding: 0;
-      list-style: none;
-    }
-
-    .chips-icons {
-      font-size: 13px;
-      padding: 7px 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: #f3f5f7;
-      border-radius: 50px;
-      white-space: nowrap; /* stops chip text from wrapping */
-    }
-
-    .chips-icons img {
-      width: 14px;
-      height: 14px;
-    }
+    
+    .bold-text {
+        font-size: 3.2rem;
+    }}
+    
 
     /* ── DESCRIPTION ── */
     .description {
-      font-size: 14px;
-      line-height: 1.65;
-      margin: 12px auto 20px;
-      max-width: 100%; /* was 70% — caused overflow */
-      width: 100%;
       text-align: center;
-      color: #444;
+    }
+    .badges {
+        justify-content: center;
     }
 
     /* ── BUY NOW BUTTON — full width like Figma ── */
-    .col-left .buy-btn {
-      width: 100%; /* full width */
+     .buy-btn {
+      width: 95%; /* full width */
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 8px;
       font-size: 15px;
-      padding: 16px 20px;
+      /* padding: 16px 20px; */
       border-radius: 8px;
       margin-top: 4px;
     }
