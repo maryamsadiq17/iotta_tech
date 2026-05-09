@@ -121,7 +121,7 @@
     .col-left {
      flex: 1;
         width: 100%;
-        padding-left: 0;
+        padding-left: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -158,13 +158,13 @@
       border-radius: 8px;
       margin-top: 4px;
     }
-  }
+  
 
   /* ================================================
      4. CREAM STRIP (Improved air quality section)
      Figma: centered heading + para, floating objects
   ================================================ */
-  @media (max-width: 425px) {
+  
     /* ── WRAPPER to allow overflow from section ── */
     .section-btm {
       height: auto;
@@ -227,7 +227,7 @@
       transform: translateY(50%); /* half sticks below section */
       z-index: 10;
     }
-  }
+  
 
   /* ================================================
      5. BUNDLE SECTION
@@ -1013,23 +1013,26 @@
   .newsletter-container {
     flex-direction: column;
     gap: 0;
+    width: 100%;
     align-items: center;
   }
 
   /* Image TOP */
   .newsletter-right {
-    order: -1;
-    width: 100%;
-    justify-content: center;
-    padding: 30px 10% 10px;
-    background-color: #f5efe6;
+        width: 100%;
+       order: -1;     
+        display: flex;
+        justify-content: center;
+        padding: 40px 10% 20px;
+        margin-left: 0;
   }
 
   .purifier-img {
-    max-width: 200px;
-    width: 100%;
-    margin: 0 auto;
-    display: block;
+   width: 130%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    margin-left: -190px;
   }
 
   /* Text + form below */
@@ -1152,4 +1155,5 @@
     font-size: 12px;
     text-align: center;
   }
-} /* end @media 425px */
+/* end @media 425px */
+}

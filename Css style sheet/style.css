@@ -1289,6 +1289,7 @@ li {
 
 /* ── Right Side ── */
 .newsletter-right {
+  
   flex: 1;
   display: flex;
   justify-content: center;
