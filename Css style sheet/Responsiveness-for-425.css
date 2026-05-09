@@ -274,10 +274,7 @@
   }
 
   .bundle-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flow-root;
     align-items: baseline;
     gap: 4px;
     margin-bottom: 24px;
@@ -331,7 +328,7 @@
 
   .card-badges {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
     width: 100%;
     margin-bottom: 8px;
