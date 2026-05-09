@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -73,51 +74,69 @@ li {
 /* Main Section... */
 /* Main Section... */
 .main-section {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  padding: 0 10%;
-  align-items: center;
-  position: relative;
+   /* max-width: 1200px; */
+    width: 100%;
+    padding: 0px 0 0px 100px;
 }
 
+.main-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
 .col-left {
-  max-width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  padding-right: 40px;
+  flex: 0 0 500px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 2;
 }
 
-.txt-main {
-  font-family: "Playfair Display", serif;
-  font-size: 64px;
-  line-height: 1.1;
-  color: #1a1a1a;
-  margin-bottom: 60px;
-  max-width: 468px;
+.col-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #000;
+    letter-spacing: -0.02em;
+}
+.light-text {
+    font-weight: 400;
+    color: #333;
 }
 
 .bold-text {
-  font-weight: 900;
+    font-weight: 800;
+    font-size: 4.2rem;
+    letter-spacing: -0.03em;
 }
 
-.chips {
-  padding: 0;
-  margin: 0 0 25px 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 12px;
-  list-style: none;
-  max-width: 400px;
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+    max-width: 400px;
 }
 
-.chips-icons {
-  background: #f3f5f7;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 500;
-  border: 1px solid transparent;
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #f4f5f6;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.badge-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
 }
 
 .description {
@@ -147,14 +166,19 @@ li {
 }
 
 .col-right {
-  display: flex;
-  justify-content: center;
+  flex: 0 0 700px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1; 
 }
 
 .col-right img {
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
+  width: 120%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    margin-left: -205px;
 }
 /* bottom section */
 
