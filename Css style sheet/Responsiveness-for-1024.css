@@ -22,41 +22,97 @@
 
   /* ── HERO / MAIN SECTION ── */
   .main-section {
+   /* max-width: 1200px; */
+    width: 100%;
+    padding-left: 230px;
+}
+
+.main-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+.col-left {
+  flex: 0 0 500px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.col-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #000;
+    letter-spacing: -0.02em;
+}
+.light-text {
+    font-weight: 400;
+    color: #333;
+}
+
+.bold-text {
+    font-weight: 800;
+    font-size: 4.2rem;
+    letter-spacing: -0.03em;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #f4f5f6;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.badge-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.description {
+
+  font-size: 18px;
+  color: #444;
+  line-height: 1.4;
+  margin: 25px 0;
+  max-width: 324px;
+}
+
+
+
+.col-right {
+  flex: 0 0 700px; 
+    display: flex;
+     justify-content: flex-start;
+    position: relative;
+    z-index: 1; 
+}
+
+.col-right img {
+  width: 100%;
+    max-width: none;
     height: auto;
-    min-height: 80vh;
-    grid-template-columns: 1fr 1fr;
-    padding: 60px 5%;
-    gap: 30px;
-  }
-
-  .txt-main {
-    font-size: 42px;
-    margin-bottom: 20px;
-  }
-
-  .description {
-    font-size: 16px;
-    margin: 16px 0;
-    width: 75%;
-  }
-
-  .chips {
-    max-width: 80%;
-  }
-
-  .chips-icons {
-    font-size: 13px;
-    padding: 6px 12px;
-  }
-
-  .col-left {
-    padding-right: 20px;
-  }
-
-  .col-right img {
-    max-width: 100%;
-  }
-
+    object-fit: contain;
+    margin-left: -195px;
+}
   /* ── BOTTOM STRIP (cream section) ── */
   .section-btm {
     height: auto;
@@ -147,7 +203,6 @@
   }
 
   .features-container {
-    grid-template-columns: repeat(1, 1fr);
     gap: 0;
   }
 
@@ -157,41 +212,40 @@
   }
 
   .feature-text h3 {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .feature-text p {
-    font-size: 13px;
+    font-size: 14px;
   }
   /* Main 2 section..... */
 .main-section-2 {
     height: auto;
-    min-height: 80vh;
+    
     grid-template-columns: 1fr 1fr;
-    padding: 60px 5%;
     gap: 30px;
   }
 
   .txt-main-2{
     font-size: 42px;
+    width: 100%;
     margin-bottom: 20px;
+    /* padding-left: 20px; */
   }
 
   .description-2 {
     font-size: 16px;
     margin: 16px 0;
-    width: 75%;
+    max-width: 100%;
   }
 
 
   .col-left-2 {
-    padding-right: 20px;
+    padding-left: 70px;
   }
-
-  .col-right-2 img {
-    max-width: 100%;
+  .col-right-2 {
+        flex: 0 0 500px;
   }
-
   /* ── VIRUSES / POLLUTANTS SECTION ── */
   .viruses-section {
     padding: 50px 4%;
@@ -373,9 +427,7 @@
     white-space: nowrap;
   }
 
-  .purifier-img {
-    max-width: 100%;
-  }
+ 
 
   /* ── FOOTER ── */
   .footer {
@@ -412,4 +464,158 @@
   .footer-bottom p {
     font-size: 12px;
   }
+/* Cart Section */
+ /* --- Header Adjustment --- */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px; /* Reduced from 20px/30px */
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 15px; /* Reduced from 30px */
+}
+
+.cart-header p {
+  font-size: 14px; /* Matches Figma "Your cart" label */
+  color: #000;
+  margin: 0;
+}
+
+.cart-heading h2 {
+  font-family: "Tenez", serif;
+  font-size: 24px; /* Reduced from 28px */
+  font-weight: 700;
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+/* --- Item Adjustment --- */
+.cart-item {
+  display: flex;
+  gap: 12px;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding: 12px; /* Internal padding for the card */
+}
+
+.item-info h3 {
+  font-size: 13px; /* Smaller, sharper title */
+}
+
+.item-price {
+  font-size: 13px;
+}
+
+/* --- Checkout Section Adjustment --- */
+.gift-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px; /* Tightened padding */
+  border-top: 1px solid #f0f0f0;
+}
+
+.cart-footer {
+  padding: 15px 24px 24px; /* Reduced from 30px */
+  border-top: none; /* Already handled by gift-option */
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 14px 20px; /* Reduced height from 18px */
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px; /* Slightly smaller button text */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tax-note {
+  text-align: center;
+  font-size: 11px; /* Smaller helper text */
+  color: #999;
+  margin-top: 10px;
+}
+
+ 
+
+  /* Sticky header ke saath overflow fix */
+.main-section,
+.main-section-2,
+.newsletter-section,
+.hero-flex,
+.features-grid-section {
+  overflow: hidden;
+}
+
+/* Images jo 100% se zyada hain — unke parent pe clip */
+.col-right,
+.col-right-2,
+.newsletter-right,
+.hero-right {
+  overflow: hidden;
+}
+
+.bundle-section {
+    overflow: hidden;  /* add karo */
+  }
+
+  .carousel-outer {
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;        /* add karo */
+    position: relative; /* add karo — containing block banata hai */
+  }
+
+  .carousel-track {
+    display: flex;
+    width: 100%;        /* add karo */
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+    will-change: transform;
+  }
+
+  .carousel-track .bundle-card,
+  .carousel-track .bundle-card-3 {
+    min-width: 100%;
+    max-width: 100%;    /* add karo — yahi 300% fix karta hai */
+    flex-shrink: 0;
+  }
+
+  /* ── FIX 2: hero-right image ── */
+  .hero-right {
+    overflow: hidden;   /* already hai — check karo ye apply ho rha hai */
+    max-width: 100%;    /* add karo */
+  }
+
+  .hero-right img {
+    width: 100%;        /* 120% tha — 100% karo */
+    margin-left: 0;     /* -5px tha — 0 karo */
+    object-fit: cover;
+  }
+
+   .carousel-outer { overflow: visible; }
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transform: none !important;
+    transition: none;
+  }
+  .carousel-track .bundle-card,
+  .carousel-track .bundle-card-3 { min-width: unset; }
+  .carousel-controls { display: none; }
+
+  .carousel-outer { overflow: visible; }
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transform: none !important;
+    transition: none;
+  }
+  .carousel-track .bundle-card,
+  .carousel-track .bundle-card-3 { min-width: unset; }
+  .carousel-controls { display: none; }
 }

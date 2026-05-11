@@ -31,9 +31,12 @@
             <li>Contact</li>
           </ul>
         </div>
-        <div class="cart-icon">
+        <label for="cart-toggle" class="header-cart-icon">
+          <div class="cart-icon">
           <img src="Images/Cart.png" alt="" />
         </div>
+  </label>
+        
       </nav>
     </header>
     <section class="main-section">
@@ -92,83 +95,75 @@
     <span>100% refundable.</span>
   </div>
 
-  <div class="bundle-grid" id="bundleGrid">
+  <div class="carousel-outer" id="bundleOuter2">
+    <div class="carousel-track" id="bundleTrack2">
 
-    <!-- Card 1 -->
-    <div class="bundle-card">
-      <div class="card-badges">
-        <span class="badge-info">
-          <img src="Images/Frame (6).png" alt="" /> 48m²
-        </span>
-        <span class="badge-save">Save $195</span>
+      <!-- 'bundle-card' 1 -->
+      <div class="bundle-card">
+        <div class="card-badges">
+          <span class="badge-info"><img src="Images/Frame (6).png" alt="" /> 48m²</span>
+          <span class="badge-save">Save $195</span>
+        </div>
+        <div class="product-img">
+          <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
+        </div>
+        <div class="card-details">
+          <h3>iOTTA Air - 2 units</h3>
+        </div>
+        <div class="price-box">
+          <span class="old-price">$1698</span>
+          <span class="current-price">$1503</span>
+        </div>
+        <button class="buy-btn">Buy now</button>
       </div>
-      <div class="product-img">
-        <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
+
+      <!-- 'bundle-card' 2 -->
+      <div class="bundle-card">
+        <div class="card-badges">
+          <span class="badge-info"><img src="Images/Frame (6).png" alt="" /> 48m²</span>
+          <span class="badge-save">Save $195</span>
+        </div>
+        <div class="product-img">
+          <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
+        </div>
+        <div class="card-details">
+          <h3>iOTTA Air - 2 units</h3>
+        </div>
+        <div class="price-box">
+          <span class="old-price">$1698</span>
+          <span class="current-price">$1503</span>
+        </div>
+        <button class="buy-btn">Buy now</button>
       </div>
-      <div class="card-details">
-        <h3>iOTTA Air - 2 units</h3>
+
+      <!-- 'bundle-card' 3 -->
+      <div class="bundle-card-3">
+        <div class="card-badges">
+          <span class="badge-info"><img src="Images/Frame (6).png" alt="" /> 48m²</span>
+          <span class="badge-save">Save $195</span>
+        </div>
+        <div class="product-img">
+          <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
+        </div>
+        <div class="card-details">
+          <h3>iOTTA Air - 2 units</h3>
+        </div>
+        <div class="price-box">
+          <span class="old-price">$1698</span>
+          <span class="current-price">$1503</span>
+        </div>
+        <button class="buy-btn">Buy now</button>
       </div>
-      <div class="price-box">
-        <span class="old-price">$1698</span>
-        <span class="current-price">$1503</span>
-      </div>
-      <button class="buy-btn">Buy now</button>
+
     </div>
-
-    <!-- Card 2 -->
-    <div class="bundle-card">
-      <div class="card-badges">
-        <span class="badge-info">
-          <img src="Images/Frame (6).png" alt="" /> 48m²
-        </span>
-        <span class="badge-save">Save $195</span>
-      </div>
-      <div class="product-img">
-        <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
-      </div>
-      <div class="card-details">
-        <h3>iOTTA Air - 2 units</h3>
-      </div>
-      <div class="price-box">
-        <span class="old-price">$1698</span>
-        <span class="current-price">$1503</span>
-      </div>
-      <button class="buy-btn">Buy now</button>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="bundle-card-3">
-      <div class="card-badges">
-        <span class="badge-info">
-          <img src="Images/Frame (6).png" alt="" /> 48m²
-        </span>
-        <span class="badge-save">Save $195</span>
-      </div>
-      <div class="product-img">
-        <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
-      </div>
-      <div class="card-details">
-        <h3>iOTTA Air - 2 units</h3>
-      </div>
-      <div class="price-box">
-        <span class="old-price">$1698</span>
-        <span class="current-price">$1503</span>
-      </div>
-      <button class="buy-btn">Buy now</button>
-    </div>
-
   </div>
 
-  <!-- Arrows — only visible on mobile -->
-  <div class="bundle-arrows">
-    <button class="bundle-arrow-btn"
-      onclick="document.getElementById('bundleGrid').scrollBy({left: -320, behavior: 'smooth'})">
-      &#8592;
-    </button>
-    <button class="bundle-arrow-btn"
-      onclick="document.getElementById('bundleGrid').scrollBy({left: 320, behavior: 'smooth'})">
-      &#8594;
-    </button>
+  <div class="carousel-controls">
+    <div class="carousel-prog">
+      <div class="carousel-fill" id="bundleFill2"></div>
+    </div>
+    <button class="carousel-arr" id="bundlePrev2" disabled aria-label="Previous">&#8592;</button>
+    <button class="carousel-arr" id="bundleNext2" aria-label="Next">&#8594;</button>
   </div>
 
 </section>
@@ -638,86 +633,85 @@
     <!-- Another Bundle Section -->
 
     <section class="bundle-section">
-      <div class="bundle-header">
-        <h2>Bundle & save.</h2>
-        <span>100% refundable.</span>
+  <div class="bundle-header">
+    <h2>Bundle & save.</h2>
+    <span>100% refundable.</span>
+  </div>
+
+  <!-- Carousel Wrapper -->
+  <div class="carousel-outer" id="bundleOuter">
+    <div class="carousel-track" id="bundleTrack">
+
+      <!-- 'bundle-card' 1 -->
+      <div class="bundle-card">
+        <div class="card-badges">
+          <span class="badge-info"><img src="Images/Frame (6).png" alt="" /> 48m²</span>
+          <span class="badge-save">Save $195</span>
+        </div>
+        <div class="product-img">
+          <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
+        </div>
+        <div class="card-details">
+          <h3>iOTTA Air - 2 units</h3>
+        </div>
+        <div class="price-box">
+          <span class="old-price">$1698</span>
+          <span class="current-price">$1503</span>
+        </div>
+        <button class="buy-btn">Buy now</button>
       </div>
-      <!-- Grid Container -->
-      <div class="bundle-grid">
-        <!-- 'bundle-card' 1 -->
-        <div class="bundle-card">
-          <!-- Top badge -->
-          <div class="card-badges">
-            <span class="badge-info"
-              ><img src="Images/Frame (6).png" alt="" /> 48m²</span
-            >
-            <span class="badge-save">Save $195</span>
-          </div>
-          <!-- Product image -->
-          <div class="product-img">
-            <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
-          </div>
-          <!-- Product Details -->
-          <div class="card-details">
-            <h3>iOTTA Air - 2 units</h3>
-          </div>
-          <div class="price-box">
-            <span class="old-price">$1698</span>
-            <span class="current-price">$1503</span>
-          </div>
 
-          <button class="buy-btn">Buy now</button>
+      <!-- 'bundle-card' 2 -->
+      <div class="bundle-card">
+        <div class="card-badges">
+          <span class="badge-info"><img src="Images/Frame (6).png" alt="" /> 48m²</span>
+          <span class="badge-save">Save $195</span>
         </div>
-        <!-- 'bundle-card' 2 -->
-        <div class="bundle-card">
-          <!-- Top badge -->
-          <div class="card-badges">
-            <span class="badge-info"
-              ><img src="Images/Frame (6).png" alt="" /> 48m²</span
-            >
-            <span class="badge-save">Save $195</span>
-          </div>
-          <!-- Product image -->
-          <div class="product-img">
-            <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
-          </div>
-          <!-- Product Details -->
-          <div class="card-details">
-            <h3>iOTTA Air - 2 units</h3>
-          </div>
-          <div class="price-box">
-            <span class="old-price">$1698</span>
-            <span class="current-price">$1503</span>
-          </div>
-
-          <button class="buy-btn">Buy now</button>
+        <div class="product-img">
+          <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
         </div>
-        <!-- 'bundle-card' 3 -->
-        <div class="bundle-card-3">
-          <!-- Top badge -->
-          <div class="card-badges">
-            <span class="badge-info"
-              ><img src="Images/Frame (6).png" alt="" /> 48m²</span
-            >
-            <span class="badge-save">Save $195</span>
-          </div>
-          <!-- Product image -->
-          <div class="product-img">
-            <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
-          </div>
-          <!-- Product Details -->
-          <div class="card-details">
-            <h3>iOTTA Air - 2 units</h3>
-          </div>
-          <div class="price-box">
-            <span class="old-price">$1698</span>
-            <span class="current-price">$1503</span>
-          </div>
-
-          <button class="buy-btn">Buy now</button>
+        <div class="card-details">
+          <h3>iOTTA Air - 2 units</h3>
         </div>
+        <div class="price-box">
+          <span class="old-price">$1698</span>
+          <span class="current-price">$1503</span>
+        </div>
+        <button class="buy-btn">Buy now</button>
       </div>
-    </section>
+
+      <!-- 'bundle-card' 3 -->
+      <div class="bundle-card-3">
+        <div class="card-badges">
+          <span class="badge-info"><img src="Images/Frame (6).png" alt="" /> 48m²</span>
+          <span class="badge-save">Save $195</span>
+        </div>
+        <div class="product-img">
+          <img src="Images/Mask Group.png" alt="iOTTA Air - 2 units" />
+        </div>
+        <div class="card-details">
+          <h3>iOTTA Air - 2 units</h3>
+        </div>
+        <div class="price-box">
+          <span class="old-price">$1698</span>
+          <span class="current-price">$1503</span>
+        </div>
+        <button class="buy-btn">Buy now</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <div class="carousel-controls">
+    <div class="carousel-prog">
+      <div class="carousel-fill" id="bundleFill"></div>
+    </div>
+    <button class="carousel-arr" id="bundlePrev" disabled aria-label="Previous">&#8592;</button>
+    <button class="carousel-arr" id="bundleNext" aria-label="Next">&#8594;</button>
+  </div>
+
+</section>
 
     <!-- News Letter Section -->
 
@@ -839,5 +833,144 @@
     <div class="footer-bottom">
       <p>© 2022 iOTTA. All rights reserved.</p>
     </div>
+
+    <!-- Cart Toggle -->
+
+    <input type="checkbox" id="cart-toggle" style="display:none;">
+
+<div class="cart-drawer">
+  <div class="cart-header">
+    <p>Your cart</p>
+    <label for="cart-toggle" class="close-cart">✕</label>
+  </div>
+  
+  <div class="cart-heading">
+    <h2>The clean air <span>you deserve.</span></h2>
+  </div>
+
+  <div class="cart-items">
+    <div class="cart-item">
+      <div class="item-img">
+        <img src="Images/Mask Group (2).png" alt="iOTTA Air">
+      </div>
+      <div class="item-info">
+        <div class="item-title-row">
+          <h3>iOTTA Air - 2 units</h3>
+          <span class="item-price"><small>$1698</small> $1503</span>
+        </div>
+        <p>Includes a 6mo. filter</p>
+        <div class="item-controls">
+          <div class="quantity-selector">
+            <button>–</button>
+            <span>1</span>
+            <button>+</button>
+          </div>
+          <button class="remove-link">Remove</button>
+        </div>
+      </div>
+    </div> <div class="cart-item">
+      <div class="item-img">
+        <img src="Images/Mask Group (2).png" alt="iOTTA Air">
+      </div>
+      <div class="item-info">
+        <div class="item-title-row">
+          <h3>iOTTA Air - 4 units</h3>
+          <span class="item-price"><small>$1698</small> $1503</span>
+        </div>
+        <p>Includes a 6mo. filter</p>
+        <div class="item-controls">
+          <div class="quantity-selector">
+            <button>–</button>
+            <span>3</span>
+            <button>+</button>
+          </div>
+          <button class="remove-link">Remove</button>
+        </div>
+      </div> </div> <div class="gift-option">
+    <div class="gift-txt">
+      <img src="Images/Frame 70.jpg" alt="">
+      <p>This is a Gift</p>
+    </div>
+    
+    <label class="switch">
+      <input type="checkbox" class="toggle-switch">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+    </div> 
+
+  <div class="cart-footer">
+    <button class="checkout-btn">
+      <span>Checkout</span>
+      <span>$1503</span>
+    </button>
+    <p class="tax-note">Taxes and shipping calculated at checkout.</p>
+  </div>
+</div>
+
+<label for="cart-toggle" class="cart-overlay"></label>
+
+   <script>
+  function initCarousel(trackId, fillId, prevId, nextId, outerId) {
+    const track = document.getElementById(trackId);
+    const fill  = document.getElementById(fillId);
+    const prev  = document.getElementById(prevId);
+    const next  = document.getElementById(nextId);
+    const outer = document.getElementById(outerId);
+    const total = track.children.length;
+    let cur = 0, startX = 0, dragDelta = 0, dragging = false;
+
+    function go(n) {
+      cur = Math.max(0, Math.min(total - 1, n));
+      track.style.transition = 'transform 0.45s cubic-bezier(0.77,0,0.18,1)';
+      track.style.transform  = `translateX(-${cur * 100}%)`;
+      fill.style.width       = `${((cur + 1) / total) * 100}%`;
+      prev.disabled = cur === 0;
+      next.disabled = cur === total - 1;
+    }
+
+    prev.addEventListener('click', () => go(cur - 1));
+    next.addEventListener('click', () => go(cur + 1));
+
+    outer.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+      dragging = true; dragDelta = 0;
+      track.style.transition = 'none';
+    }, { passive: true });
+
+    outer.addEventListener('touchmove', e => {
+      if (!dragging) return;
+      dragDelta = e.touches[0].clientX - startX;
+      track.style.transform = `translateX(calc(-${cur * 100}% + ${dragDelta}px))`;
+    }, { passive: true });
+
+    outer.addEventListener('touchend', () => {
+      dragging = false;
+      if (dragDelta < -50) go(cur + 1);
+      else if (dragDelta > 50) go(cur - 1);
+      else go(cur);
+    });
+
+    go(0);
+  }
+
+  // Section 1
+  initCarousel('bundleTrack', 'bundleFill', 'bundlePrev', 'bundleNext', 'bundleOuter');
+  // Section 2
+  initCarousel('bundleTrack2', 'bundleFill2', 'bundlePrev2', 'bundleNext2', 'bundleOuter2');
+
+  let lastY = 0;
+  window.addEventListener('scroll', () => {
+    const currentY = window.scrollY;
+    const header = document.querySelector('header');
+    if (currentY > lastY && currentY > 60) {
+      header.classList.add('nav-hidden');    // scroll down — hide
+    } else {
+      header.classList.remove('nav-hidden'); // scroll up — show
+    }
+    lastY = currentY;
+  });
+</script>
   </body>
 </html>

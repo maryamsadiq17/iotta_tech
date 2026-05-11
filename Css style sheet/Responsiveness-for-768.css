@@ -32,74 +32,69 @@
 
   /* ── MAIN HERO SECTION ── */
   .main-section {
-    /* height: auto;
-    min-height: unset; */
-    grid-template-columns: 1fr 1fr; /* still 2 columns at 768 like Figma */
-    /* padding: 30px 4%; */
-    gap: 16px;
-    align-items: center;
+    padding-left: 40px;
+    width: 100%;
   }
 
-  /* ── LEFT COLUMN ── */
+  .main-container {
+    flex-direction: row;
+    gap: 0;
+    max-width: 768px;
+  }
   .col-left {
-    padding-right: 10px;
+    flex: 0 0 320px;
+    padding-left: 15px;
   }
 
-  .txt-main {
-    font-size: 42px; /* matches the large text in the screenshot */
-    line-height: 1.15;
-    margin-bottom: 16px;
+  .col-left h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+  }
+  .light-text {
+    font-weight: 400;
+    color: #333;
   }
 
-  /* Chips — wrap into 2 per row like Figma */
-  .chips {
+  .bold-text {
+    font-size: 2.7rem;
+  }
+
+  .badges {
     gap: 8px;
-    margin-bottom: 16px;
-    max-width: 70%;
+    margin-bottom: 20px;
+    max-width: 240px;
   }
 
-  .chips-icons {
-    font-size: 12px;
-    padding: 6px 10px;
+  .badge {
+    padding: 6px 12px;
+    font-size: 0.75rem;
     gap: 5px;
   }
 
-  .chips-icons img {
-    width: 14px;
-    height: 14px;
+  .badge-icon {
+    width: 13px;
+    height: 13px;
   }
 
   .description {
-    font-size: 15px;
-    line-height: 1.5;
-    margin: 14px 0;
-    color: #333;
-    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
   }
 
-  /* Buy Now Button */
-  .buy-btn {
-    font-size: 14px;
-    padding: 11px 20px;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  /* ── RIGHT COLUMN ── */
   .col-right {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    flex: 0 0 450px;
   }
 
   .col-right img {
-    width: 100%;
+    width: 130%;
     max-width: none;
     height: auto;
+    object-fit: contain;
+    margin-left: -150px;
   }
+  /* Next Section */
+
   .prgrph {
     /* Reducing padding for tablet to give text more horizontal space */
     padding: 40px 10%;
@@ -142,13 +137,12 @@
 
   .txt-main-2 {
     font-size: 42px; /* matches the large text in the screenshot */
-    line-height: 1.15;
+    
     margin-bottom: 16px;
   }
 
-
   .description-2 {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.5;
     margin: 14px 0;
     color: #333;
@@ -166,18 +160,199 @@
   }
 
   /* ── RIGHT COLUMN ── */
-  .col-right-2 {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
+  .col-right-2  {
+    flex: 0 0 380px;
   }
 
   .col-right-2 img {
-    width: 100%;
     max-width: none;
     height: auto;
+    padding-right: 0;
   }
+/* Cart Section */
+
+  .cart-drawer {
+    width: 415px; /* Precision width to balance space */
+    right: -415px;
+  }
+
+  /* 2. Precision Header Sizing */
+  .cart-header {
+    padding: 12px 20px; /* Thinner header area */
+    margin-bottom: 20px;
+  }
+
+  .cart-header p {
+    font-size: 16px; /* Exactly as shown in the "Your cart" label */
+    font-weight: 400;
+  }
+
+  .close-cart {
+    font-size: 20px; /* Matching the 'X' icon scale */
+  }
+
+  /* 3. Typography: "The clean air you deserve." */
+  .cart-heading h2 {
+    font-family: "Tenez", serif;
+    font-size: 26px; /* Scaled down to prevent "too large" feeling */
+    padding-left: 20px;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  /* 4. Refined Item Cards */
+  .cart-items {
+    padding: 0 20px;
+  }
+
+  .cart-item {
+    padding: 10px;
+    gap: 12px;
+    border-radius: 10px; /* Softer rounding for 768px view */
+  }
+
+  .item-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .item-info h3 {
+    font-size: 15px; /* Clean, legible header */
+    margin-bottom: 2px;
+  }
+
+  .item-info p {
+    margin: 2px 0 10px; /* Tighter vertical spacing */
+  }
+
+  /* 5. Compact Checkout Section */
+  .gift-option {
+    padding: 15px 20px;
+    margin-top: 10px;
+  }
+
+  .cart-footer {
+    padding: 20px;
+  }
+
+  .checkout-btn {
+    padding: 14px 20px; /* Slimmer vertical profile */
+    border-radius: 6px;
+    font-size: 18px;
+    height: auto; /* Overriding laptop height */
+  }
+
+  .tax-note {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+
+
+  /* Sticky header ke saath overflow fix */
+  .main-section,
+  .main-section-2,
+  .newsletter-section,
+  .hero-flex,
+  .features-grid-section {
+    overflow: hidden;
+  }
+
+  /* Images jo 100% se zyada hain — unke parent pe clip */
+  .col-right,
+  .col-right-2,
+  .newsletter-right,
+  .hero-right {
+    overflow: hidden;
+  }
+
+  .bundle-section {
+    overflow: hidden; /* add karo */
+  }
+
+  .carousel-outer {
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%; /* add karo */
+    position: relative; /* add karo — containing block banata hai */
+  }
+
+  .carousel-track {
+    display: flex;
+    width: 100%; /* add karo */
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+    will-change: transform;
+  }
+
+  .carousel-track .bundle-card,
+  .carousel-track .bundle-card-3 {
+    min-width: 100%;
+    max-width: 100%; /* add karo — yahi 300% fix karta hai */
+    flex-shrink: 0;
+  }
+
+  /* ── FIX 2: hero-right image ── */
+  .hero-right {
+    width: 130%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .hero-right img {
+    width: 100%; /* 120% tha — 100% karo */
+    margin-left: 0; /* -5px tha — 0 karo */
+    object-fit: cover;
+  }
+
+  .carousel-outer {
+    overflow: visible;
+  }
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transform: none !important;
+    transition: none;
+  }
+  .carousel-track .bundle-card,
+  .carousel-track .bundle-card-3 {
+    min-width: unset;
+  }
+  .carousel-controls {
+    display: none;
+  }
+
+  .carousel-outer {
+    overflow: visible;
+  }
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transform: none !important;
+    transition: none;
+  }
+  .carousel-track .bundle-card,
+  .carousel-track .bundle-card-3 {
+    min-width: unset;
+  }
+  .carousel-controls {
+    display: none;
+  }
+
+  /* .newsletter-form */
+  .newsletter-form{
+    display: flow;
+  }
+  .email-input{
+    margin-bottom: 12px;
+     
+  }
+  .purifier-img {
+        width: 150%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    margin-left: -205px;
+
 }
 
-
+}

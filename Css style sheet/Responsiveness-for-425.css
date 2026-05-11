@@ -18,37 +18,21 @@
     max-width: 100%;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
   /* ================================================
      1. ANNOUNCEMENT BAR
      Figma: "Free shipping 2 Days | Shop Now" — centered
   ================================================ */
   .announcement-bar {
-    font-size: 12px;
-    height: auto;
-    padding: 8px 12px;
-    gap: 8px;
-    flex-wrap: nowrap;
-    justify-content: center;
-    white-space: nowrap;
-  }
-
-  .announcement-bar a {
-    padding: 4px 10px;
-    font-size: 12px;
-    white-space: nowrap;
+    display: none; /* hides the announcement bar on mobile since Figma doesn't show it */
   }
 
   /* ================================================
      2. NAV BAR
      Figma: iO logo left | About us + Contact center | cart right
   ================================================ */
+  
   .nav-bar {
-    padding: 10px 5%;
+    padding: 10px 10%;
     height: auto;
     min-height: 52px;
   }
@@ -83,7 +67,6 @@
      Figma: product image TOP (full width, light blue bg)
              text + chips + button BELOW
   ================================================ */
-  @media (max-width: 425px) {
     .main-section {
       padding: 0px 0px 40px 0px;
     }
@@ -96,25 +79,30 @@
     /* ── IMAGE AREA ── */
     .col-right {
       flex: 1;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
-      background: linear-gradient(
-        180deg,
-        #d6e4f7 0%,
-        #e8f2fc 40%,
-        #fcfcfc 100%
-      );
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    background: linear-gradient(
+      180deg,
+      #d6e4f7 0%,
+      #e8f2fc 40%,
+      #fcfcfc 100%
+    );
+    padding: 20px 0;
     }
 
     .col-right img {
-      width: 130%;
-    max-width: none;
+     width: 100%;           /* remove 130% — was causing overflow */
+       
     height: auto;
     object-fit: contain;
-    margin-left: -190px;
+    margin-left: 0;       /* remove -190px — was pushing it left */
+    display: block;
+    margin: 0 auto;
+    margin-left: -90px;
+
     }
 
     /* ── TEXT AREA ── */
@@ -135,7 +123,7 @@
     
     .bold-text {
         font-size: 3.2rem;
-    }}
+    }
     
 
     /* ── DESCRIPTION ── */
@@ -238,7 +226,7 @@
 /* Hide dots/arrows on all screens */
 
   .bundle-section {
-    padding: 36px 5%;
+    padding: 36px 10%;
     overflow: hidden;
   }
 
@@ -469,14 +457,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 30px 8%;
     background-color: #f5f5f5;
   }
 
   .col-right-2 img {
-    max-width: 240px;
-    width: 100%;
+    width: 120%;
+    max-width: none;
     height: auto;
+    object-fit: contain;
+    margin-left: -130px;
   }
 
   .col-left-2 {
@@ -595,14 +584,14 @@
      GRID SECTION
   ================================================ */
   .features-grid-section {
-    padding: 0 4% 40px;
+    padding: 0 0% 0;
     overflow: hidden;
   }
 
   .features-container-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    /* gap: 12px; */
   }
 
   /* ── Card: white box, image on top, text centered below ── */
@@ -623,13 +612,17 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
-    padding: 16px;
     box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
+     width: 100%;
   }
 
   .feature-image img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 110%;
+    max-height: 170px;
+    border-radius: 16px;
+    overflow: hidden;
     object-fit: contain;
   }
 
@@ -640,7 +633,8 @@
     font-weight: 700;
     color: #000;
     text-align: center;
-    margin: 12px 12px 6px;
+    /* margin: 12px 12px 6px; */
+    padding: 20px 0 0 0;
     line-height: 1.2;
   }
 
@@ -661,7 +655,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 16px 4% 30px;
+    /* padding: 16px 4% 30px; */
     max-width: 100%;
     background-color: #f9f5ec;
     box-sizing: border-box;
@@ -793,7 +787,7 @@
   ================================================ */
   .hero-flex {
     flex-direction: column;
-    height: auto;
+    height: 800px;
     min-height: unset;
     padding: 0;
     overflow: hidden;
@@ -801,7 +795,7 @@
   }
 
   .hero-left-1 {
-    padding: 40px 6% 32px;
+    padding: 40px 0 0 0;
     text-align: center;
     align-items: center;
     order: 1;
@@ -846,8 +840,9 @@
   }
 
   .hero-right img {
-    width: 100%;
+    width: 120%;
     height: 100%;
+    margin-left: -5px;
     object-fit: cover;
     object-position: center;
   }
@@ -867,13 +862,14 @@
   ================================================ */
   .health-environment {
     overflow: hidden;
+    height: 700px;
     justify-content: center;
     align-items: center;
   }
 
   .health-container {
-    height: auto;
-    min-height: 520px;
+    height: 700px;
+    /* min-height: 520px; */
     padding: 24px 5%;
     align-items: flex-start;
     justify-content: center;
@@ -921,6 +917,7 @@
   ================================================ */
   .faq-section {
     padding: 50px 5%;
+    height: 722px;
     overflow: hidden;
   }
 
@@ -933,6 +930,7 @@
     line-height: 1.2;
     margin-bottom: 36px;
     text-align: center;
+    padding-top: 40px;
   }
 
   .faq-accordion {
@@ -965,9 +963,9 @@
      Figma: full screen bg image with overlay text centered
   ================================================ */
   .about-us-section {
-    height: 100vw;
+    /* height: 700px; */
     min-height: 380px;
-    max-height: 500px;
+    /* max-height: 500px; */
     overflow: hidden;
   }
 
@@ -1006,7 +1004,7 @@
              input stacked above full-width button
   ================================================ */
   .newsletter-section {
-    padding: 0 0 40px;
+    padding: 0 15px 40px 15px;
     overflow: hidden;
   }
 
@@ -1032,7 +1030,7 @@
     max-width: none;
     height: auto;
     object-fit: contain;
-    margin-left: -190px;
+    margin-left: -180px;
   }
 
   /* Text + form below */
@@ -1085,7 +1083,7 @@
              Stay tuned full width with 2-col social links
   ================================================ */
   .footer {
-    padding: 40px 5% 0;
+    padding: 40px 10% 0;
     overflow: hidden;
   }
 
@@ -1154,6 +1152,176 @@
   .footer-bottom p {
     font-size: 12px;
     text-align: center;
+  }
+
+  /* 1. Make the drawer full-width or near full-width */
+  .cart-drawer {
+    width: 100%; 
+    right: -100%; /* Adjust hidden position for full-width */
+  }
+
+  /* 2. Tighten the Header Spacing */
+  .cart-header {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+  }
+
+  .cart-heading h2 {
+    font-size: 24px; /* Slightly smaller for mobile screens */
+    padding-left: 20px;
+  }
+
+  /* 3. Optimize Cart Items for small screens */
+  .cart-items {
+    padding: 0 20px;
+  }
+
+  .cart-item {
+    gap: 10px; /* Reduce gap to prevent horizontal overflow */
+  }
+
+  .item-img {
+    width: 70px; /* Scale down image container */
+    height: 70px;
+    padding: 5px;
+  }
+
+  .item-info h3, 
+  .item-price {
+    font-size: 13px; /* Slightly smaller text */
+  }
+
+  /* 4. Adjust the Footer and Buttons */
+  .gift-option {
+    padding: 15px 20px; /* Match side padding */
+  }
+
+  .cart-footer {
+    padding: 20px;
+  }
+
+  .checkout-btn {
+    padding: 15px 20px; /* More compact button */
+    font-size: 16px;
+  }
+
+  /* 5. Adjust quantity selector size for fat-finger friendliness */
+  .quantity-selector {
+    padding: 6px 14px;
+    gap: 20px;
+  }
+
+
+  /* ── Carousel ── */
+.carousel-outer {
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+  will-change: transform;
+}
+
+.carousel-track .bundle-card,
+.carousel-track .bundle-card-3 {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.carousel-prog {
+  flex: 1;
+  height: 2px;
+  background: #e0e0e0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.carousel-fill {
+  height: 100%;
+  background: #000;
+  border-radius: 99px;
+  transition: width 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.carousel-arr {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.carousel-arr:hover { background: #f5f5f5; }
+.carousel-arr:active { transform: scale(0.93); }
+.carousel-arr:disabled { opacity: 0.25; cursor: default; }
+
+/* Sticky header ke saath overflow fix */
+.main-section,
+.main-section-2,
+.newsletter-section,
+.hero-flex,
+.features-grid-section {
+  overflow: hidden;
+}
+
+/* Images jo 100% se zyada hain — unke parent pe clip */
+.col-right,
+.col-right-2,
+.newsletter-right,
+.hero-right {
+  overflow: hidden;
+}
+
+.bundle-section {
+    overflow: hidden;  /* add karo */
+  }
+
+  .carousel-outer {
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;        /* add karo */
+    position: relative; /* add karo — containing block banata hai */
+  }
+
+  .carousel-track {
+    display: flex;
+    width: 100%;        /* add karo */
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+    will-change: transform;
+  }
+
+  .carousel-track .bundle-card,
+  .carousel-track .bundle-card-3 {
+    min-width: 100%;
+    max-width: 100%;    /* add karo — yahi 300% fix karta hai */
+    flex-shrink: 0;
+  }
+
+  /* ── FIX 2: hero-right image ── */
+  .hero-right {
+    overflow: hidden;   /* already hai — check karo ye apply ho rha hai */
+    max-width: 100%;    /* add karo */
+  }
+
+  .hero-right img {
+    width: 100%;        /* 120% tha — 100% karo */
+    margin-left: 0;     /* -5px tha — 0 karo */
+    object-fit: cover;
   }
 /* end @media 425px */
 }
