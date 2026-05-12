@@ -9,14 +9,19 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 440px) {
-  /* ── GLOBAL OVERFLOW FIX ── */
-  html,
-  body {
+body {
     overflow-x: hidden;
     width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  /* ── GLOBAL OVERFLOW FIX ── */
+  img {
     max-width: 100%;
-  }
+    height: auto;
+}
 
   /* ================================================
      1. ANNOUNCEMENT BAR
